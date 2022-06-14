@@ -6,8 +6,10 @@ import App from './App.vue';
 import router from './router';
 import languages from './i18n';
 
+const BROWSER_LANGUAGE = navigator.language.split('-')[0];
+
 const i18n = createI18n({
-  locale: 'es', // set locale
+  locale: BROWSER_LANGUAGE, // set locale
   fallbackLocale: 'en', // set fallback locale
   messages: languages // set locale messages
 });
