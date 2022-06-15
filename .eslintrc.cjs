@@ -43,6 +43,7 @@ module.exports = {
   rules: {
     'vue/script-setup-uses-vars': RULES.ERROR,
     'vue/no-multiple-template-root': RULES.OFF,
+    'vue/no-v-model-argument': RULES.OFF,
     '@typescript-eslint/unbound-method': RULES.OFF,
     '@typescript-eslint/no-unsafe-assignment': RULES.OFF,
     'import/extensions': RULES.OFF,

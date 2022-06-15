@@ -1,3 +1,10 @@
 {
-  "hello_world": "Hola mundo"
+  "hello_world": "Hola mundo",
+  "pages": {
+    "sender": "Enviador",
+    "about": "Acerca de"
+  },
+  "about": {
+    "title": "Esta es la página del about"
+  }
 }

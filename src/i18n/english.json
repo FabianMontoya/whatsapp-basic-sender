@@ -1,3 +1,10 @@
 {
-  "hello_world": "Hello world"
+  "hello_world": "Hello world",
+  "pages": {
+    "sender": "Sender",
+    "about": "About"
+  },
+  "about": {
+    "title": "This is an about page"
+  }
 }

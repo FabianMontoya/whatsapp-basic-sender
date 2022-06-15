@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   props: {
@@ -14,8 +14,11 @@ export default defineComponent({
       { name: 'English', value: 'en' }
     ];
 
+    const selectedOption = ref('Fabian');
+
     return {
-      langs
+      langs,
+      selectedOption
     };
   }
 });
@@ -31,11 +34,27 @@ export default defineComponent({
     <span>{{ $t('hello_world') }}</span>
     <br />
 
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+
     <select v-model="$i18n.locale">
       <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.value">
         {{ lang.name }}
       </option>
     </select>
+
+    <br />
+
+    <div>
+      <span class="font-bold text-2xl">asdasd</span>
+      <a-button type="danger" loading>asdas</a-button>
+      <a-select v-model:value="selectedOption" show-search class="w-32">
+        <a-select-option value="1">asdasd</a-select-option>
+        <a-select-option value="2">basdasd</a-select-option>
+        <a-select-option value="3">casdasdasdas</a-select-option>
+        <a-select-option value="Fabian">Fabian</a-select-option>
+      </a-select>
+      <code>Selected: {{ selectedOption }}</code>
+    </div>
   </div>
 </template>
 

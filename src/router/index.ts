@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import i18n from '../i18n';
 import HomeView from '../views/HomeView.vue';
+import AboutView from '../views/AboutView.vue';
+
+const { t } = i18n.global;
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,17 +11,26 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        titleKey: 'sender'
+      }
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: AboutView,
+      meta: {
+        titleKey: 'about'
+      }
     }
   ]
+});
+
+router.beforeEach((to, from, next) => {
+  localStorage.setItem('language', i18n.global.locale);
+  document.title = `${t(`pages.${to.meta.titleKey}`)} - Simple WhatsApp Sender App`;
+  next();
 });
 
 export default router;
