@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "vite.config.*", ".eslintrc.*", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "config/*.ts"],
+  "include": ["env.d.ts", "vite.config.*", "tailwind.config.*", ".eslintrc.*", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "config/*.ts"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

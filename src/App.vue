@@ -9,7 +9,7 @@ import HelloWorld from './components/HelloWorld.vue';
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-
+      <span class="font-bold text-2xl">asdasd</span>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -21,8 +21,8 @@ import HelloWorld from './components/HelloWorld.vue';
 </template>
 
 <style>
-@import '@/assets/base.css';
-
+/*@import '@/assets/base.css';*/
+/*
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -115,5 +115,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+}*/
 </style>
