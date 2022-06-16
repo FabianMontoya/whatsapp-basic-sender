@@ -4,4 +4,6 @@
 
 body {
   background: #f9fafb !important;
+  min-height: 100vh !important;
+  min-width: 375px !important;
 }

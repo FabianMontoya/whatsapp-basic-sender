@@ -4,6 +4,20 @@
     "sender": "Sender",
     "about": "About"
   },
+  "note": "Note:",
+  "sender": {
+    "title": "Sender Message",
+    "pharagraph_1": "You can use this sender to send a WhatsApp's message to a person without you must to save the contact number in your phone.",
+    "pharagraph_2": "For this, you must to have install the WhatsApp app in your phone or have a active session in WhatsApp web in your browser.",
+    "note": "We not collect any information about your message or the destinatary, we only help you doing a correct redirection to the WhatsApp app.",
+    "input_phone_placeholder": "Phone number",
+    "input_message_placeholder": "Enter your message...",
+    "btn_send": "Send message",
+    "msg_error_title": "Invalid fields",
+    "msg_error_message": "Please enter valid values in order to send the message.",
+    "msg_success_title": "Message sent",
+    "msg_success_message": "Your message has been sent."
+  },
   "about": {
     "title": "This is an about page"
   }

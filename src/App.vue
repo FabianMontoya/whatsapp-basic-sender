@@ -15,7 +15,7 @@ const antLanguages = {
   <a-config-provider :locale="antLanguages[$i18n.locale]">
     <div class="flex flex-col h-screen justify-between">
       <HeaderApp />
-      <main class="max-w-page mx-auto mb-auto antialiased">
+      <main class="max-w-page mx-auto mb-auto antialiased py-5 px-3 md:px-5 lg:px-0">
         <RouterView />
       </main>
       <FooterApp />

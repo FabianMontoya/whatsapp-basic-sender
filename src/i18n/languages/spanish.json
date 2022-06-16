@@ -4,6 +4,20 @@
     "sender": "Enviador",
     "about": "Acerca de"
   },
+  "note": "Nota:",
+  "sender": {
+    "title": "Enviar Mensaje",
+    "pharagraph_1": "Con este enviador puedes enviar un mensaje de WhatsApp a una persona sin tener que guardar el número de ella en tu teléfono.",
+    "pharagraph_2": "Para esto, debes tener instalada la app de WhatsApp en tu celular o tener una sesión activa de WhatsApp web en su navegador.",
+    "note": "No recopilamos ninguna información sobre tu mensaje o el destinatario de este, esta app tiene la funcionalidad de ayudarte a realizar una redirección correcta a la aplicación de WhatsApp.",
+    "input_phone_placeholder": "Número de teléfono",
+    "input_message_placeholder": "Ingresa tu mensaje...",
+    "btn_send": "Enviar mensaje",
+    "msg_error_title": "Campos inválidos",
+    "msg_error_message": "Por favor ingrese valores válidos para poder enviar el mensaje.",
+    "msg_success_title": "Mensaje enviado",
+    "msg_success_message": "Tu mensaje ha sido enviado."
+  },
   "about": {
     "title": "Esta es la página del about"
   }

@@ -7,8 +7,12 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AButton: typeof import('ant-design-vue/es')['Button']
     AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
+    AInput: typeof import('ant-design-vue/es')['Input']
+    AInputGroup: typeof import('ant-design-vue/es')['InputGroup']
     ASelect: typeof import('ant-design-vue/es')['Select']
     ASelectOption: typeof import('ant-design-vue/es')['SelectOption']
+    ATextarea: typeof import('ant-design-vue/es')['Textarea']
+    ATypographyText: typeof import('ant-design-vue/es')['TypographyText']
     FooterApp: typeof import('./src/components/Footer/FooterApp.vue')['default']
     HeaderApp: typeof import('./src/components/Header/HeaderApp.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
@@ -20,6 +24,7 @@ declare module '@vue/runtime-core' {
     LanguageSelect: typeof import('./src/components/Header/LanguageSelect.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SenderForm: typeof import('./src/components/SenderForm.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
