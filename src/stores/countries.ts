@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { CountryDataV2, UserLocation } from '../types';
+import type { CountryDataV2, UserLocation } from '../types';
 
 interface countriesStore {
   countries: CountryDataV2[];
