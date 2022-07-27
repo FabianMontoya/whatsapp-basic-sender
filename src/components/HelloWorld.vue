@@ -46,7 +46,6 @@ export default defineComponent({
 
     <div>
       <span class="font-bold text-2xl">asdasd</span>
-      <a-button type="danger" loading>asdas</a-button>
       <a-select v-model:value="selectedOption" show-search class="w-32">
         <a-select-option value="1">asdasd</a-select-option>
         <a-select-option value="2">basdasd</a-select-option>
