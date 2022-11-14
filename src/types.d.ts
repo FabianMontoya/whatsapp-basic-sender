@@ -4,6 +4,16 @@ export interface CountryCurrencyV2 {
   symbol: string;
 }
 
+export interface CountryFlags {
+  svg: string;
+  png: string;
+}
+
+export interface UserLocation {
+  countryCode: string;
+  countryCallingCode: string;
+}
+
 export interface CountryDataV2 {
   name: string;
   alpha2Code: string;
@@ -22,12 +32,7 @@ export interface CountryDataV2 {
   nativeName?: string;
   numericCode?: string;
   currencies?: CountryCurrencyV2[];
-  flag: string;
+  flags: CountryFlags;
   cioc?: string;
   independent: boolean;
-}
-
-export interface UserLocation {
-  countryCode: string;
-  countryCallingCode: string;
 }

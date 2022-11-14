@@ -49,7 +49,7 @@ module.exports = {
     'import/extensions': RULES.OFF,
     'import/newline-after-import': RULES.WARN,
     'no-var': RULES.ERROR,
-    'no-console': RULES.ERROR,
+    'no-console': RULES.WARN,
     'no-debugger': RULES.ERROR
   },
   overrides: [

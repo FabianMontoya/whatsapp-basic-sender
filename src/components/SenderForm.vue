@@ -38,7 +38,7 @@ const defaultCountryCallingCodes = [
   { code: '52', flagUrl: 'https://flagcdn.com/mx.svg' }
 ];
 
-const sortCountriesArray = (countriesArray) => countriesArray.sort((a, b) => a.code - b.code);
+const sortCountriesArray = (countriesArray: any[]) => countriesArray.sort((a: any, b: any) => a.code - b.code);
 
 const countryCallingCodes = computed(() =>
   countriesStore.countries.length === 0
