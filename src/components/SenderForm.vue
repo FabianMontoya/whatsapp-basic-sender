@@ -2,21 +2,49 @@
 /* eslint-disable no-unneeded-ternary */
 /* eslint-disable consistent-return */
 /* eslint-disable no-param-reassign */
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import i18n from '../i18n';
 import { openNotificationWithIcon } from '../helpers';
+import { getCountriesInfo } from '../services/countries.service';
+import { useCountriesStore } from '@/stores/countries';
 
 const { t } = i18n.global;
-
-const countryCallingCodes = [
-  { code: '93', flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg' },
-  { code: '57', flagUrl: 'https://flagcdn.com/co.svg' },
-  { code: '51', flagUrl: 'https://flagcdn.com/pe.svg' }
-];
+const countriesStore = useCountriesStore();
 
 const callingCode = ref('57');
 const phone = ref('');
 const message = ref('');
+
+onMounted(async () => {
+  try {
+    const countriesInfo = await getCountriesInfo();
+
+    countriesStore.setCountries(countriesInfo.data.countries);
+    countriesStore.updateDefaultUserLocation({
+      countryCode: countriesInfo.data.defaultCountryCode,
+      countryCallingCode: countriesInfo.data.defaultCountryCallingCode
+    });
+
+    callingCode.value = countriesInfo.data.defaultCountryCallingCode;
+  } catch (e) {
+    console.error('Error get countries info: ', e);
+  }
+});
+
+const defaultCountryCallingCodes = [
+  { code: '93', flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg' },
+  { code: '57', flagUrl: 'https://flagcdn.com/co.svg' },
+  { code: '51', flagUrl: 'https://flagcdn.com/pe.svg' },
+  { code: '52', flagUrl: 'https://flagcdn.com/mx.svg' }
+];
+
+const sortCountriesArray = (countriesArray) => countriesArray.sort((a, b) => a.code - b.code);
+
+const countryCallingCodes = computed(() =>
+  countriesStore.countries.length === 0
+    ? sortCountriesArray(defaultCountryCallingCodes)
+    : sortCountriesArray(countriesStore.countries.map((country) => ({ code: country.callingCodes[0], flagUrl: country.flags.svg })))
+);
 
 const isValidForm = computed(() => {
   let isValid = false;
@@ -97,7 +125,7 @@ const SendMessage = () => {
           <a-textarea
             v-model:value="message"
             :rows="5"
-            :maxlength="300"
+            :maxlength="1000"
             show-count
             class="w-full"
             :placeholder="$t('sender.input_message_placeholder')"
