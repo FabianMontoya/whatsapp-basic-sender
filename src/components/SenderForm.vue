@@ -101,7 +101,7 @@ const SendMessage = () => {
         <div class="w-full">
           <a-input
             v-model:value="phone"
-            type="phone"
+            type="tel"
             :maxlength="15"
             size="large"
             allow-clear
