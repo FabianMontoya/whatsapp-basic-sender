@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const DEFAULT_ENDPOINT = 'https://fmontoya-api-countries.onrender.com/api/v1';
+
 export default {};
 
 export const getCountriesInfo = () => {
-  return axios.get('https://simple-sender-api-countries.herokuapp.com/api/v1/countries');
+  return axios.get(`${DEFAULT_ENDPOINT}/countries`);
 };
